@@ -10,6 +10,9 @@ import java.util.Locale;
 
 public class Java12 {
 
+    /**
+     * String methods for indentation and transformation of a String
+     */
     public void newStringClassMethods() {
         String text = "Hello Baeldung!\nThis is Java 12 article.";
 
@@ -20,12 +23,15 @@ public class Java12 {
         System.out.println(text);
 
         String text2 = "Baeldung";
-        String transformed = text2.transform(value ->
-                new StringBuilder(value).reverse().toString()
-        );
+        String transformed = text2
+                .transform(value -> new StringBuilder(value).reverse().toString());
+
         System.out.println(transformed);
     }
 
+    /**
+     * Returns the position from where is the first character mismatch between the files
+     */
     public void fileMismatch() throws IOException {
         Path filePath1 = Files.createTempFile("file1", ".txt");
         Path filePath2 = Files.createTempFile("file2", ".txt");
@@ -34,33 +40,38 @@ public class Java12 {
 
         long mismatch = Files.mismatch(filePath1, filePath2);
         System.out.println(mismatch);
-        System.out.println();
     }
 
-    public void compactNumberFormating() {
-        NumberFormat likesShort =
-                NumberFormat.getCompactNumberInstance(new Locale("de", "DE"), NumberFormat.Style.SHORT);
+    /**
+     * Formats the number based on which country (Locale)
+     */
+    public void compactNumberFormatting() {
+
+        NumberFormat likesShort = NumberFormat
+                .getCompactNumberInstance(new Locale("de", "DE"), NumberFormat.Style.SHORT);
         likesShort.setMaximumFractionDigits(2);
-
-        NumberFormat likesLong =
-                NumberFormat.getCompactNumberInstance(new Locale("de", "DE"), NumberFormat.Style.LONG);
-        likesLong.setMaximumFractionDigits(2);
-
-
-        NumberFormat likesShort2 =
-                NumberFormat.getCompactNumberInstance(new Locale("en", "US"), NumberFormat.Style.SHORT);
-        likesShort.setMaximumFractionDigits(2);
-
-        NumberFormat likesLong2 =
-                NumberFormat.getCompactNumberInstance(new Locale("en", "US"), NumberFormat.Style.LONG);
-        likesLong.setMaximumFractionDigits(2);
-
         System.out.println(likesShort.format(1234));
+
+        NumberFormat likesShort2 = NumberFormat
+                .getCompactNumberInstance(new Locale("en", "US"), NumberFormat.Style.SHORT);
+        likesShort.setMaximumFractionDigits(2);
         System.out.println(likesShort2.format(1234));
+
+        NumberFormat likesLong = NumberFormat
+                .getCompactNumberInstance(new Locale("de", "DE"), NumberFormat.Style.LONG);
+        likesLong.setMaximumFractionDigits(2);
         System.out.println(likesLong.format(1234));
+
+        NumberFormat likesLong2 = NumberFormat
+                .getCompactNumberInstance(new Locale("en", "US"), NumberFormat.Style.LONG);
+        likesLong.setMaximumFractionDigits(2);
         System.out.println(likesLong2.format(1234));
+
     }
 
+    /**
+     * Old representation of switch case
+     */
     public void oldSwitchCase() {
 
         DayOfWeek dayOfWeek = LocalDate.now().getDayOfWeek();
@@ -80,6 +91,9 @@ public class Java12 {
         System.out.println(dayOfWeek);
     }
 
+    /**
+     * New representation of switch case
+     */
     public void newSwitchCase() {
 
         DayOfWeek dayOfWeek = LocalDate.now().getDayOfWeek();
@@ -90,6 +104,9 @@ public class Java12 {
         };
     }
 
+    /**
+     * Old representation of pattern matching
+     */
     public void oldPatternMatching () {
         Object obj = "Hello World!";
         if (obj instanceof String) {
@@ -99,6 +116,9 @@ public class Java12 {
         }
     }
 
+    /**
+     * New representation of pattern matching
+     */
     public void newPatternMatching() {
         Object obj = "Hello World!";
         if (obj instanceof String s && s.contains("Hello")) {

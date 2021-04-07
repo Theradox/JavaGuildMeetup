@@ -29,11 +29,17 @@ public class Java9 {
 
     }
 
+    /**
+     * Improvements for the stream API
+     */
     public void streamApiImprovements() {
         IntStream.iterate(1, i -> i < 100, i -> i + 1).forEach(System.out::println);
 
     }
 
+    /**
+     * Implemented http client
+     */
     public void http2() throws URISyntaxException, IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
 
@@ -48,6 +54,9 @@ public class Java9 {
 
     }
 
+    /**
+     * Can instantiate an interface with private methods
+     */
     interface InterfaceWithPrivateMethods {
 
         private static String staticPrivate() {

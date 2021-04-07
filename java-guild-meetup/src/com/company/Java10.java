@@ -5,6 +5,9 @@ import java.util.stream.Collectors;
 
 public class Java10 {
 
+    /**
+     * How not to instantiate 'var' local variable
+     */
 //    var asdf = "asdf";
 //    public var ="hello";
 
@@ -32,6 +35,9 @@ public class Java10 {
                 .orElse(0);
     }
 
+    /**
+     * New unmodifiable collections
+     */
     public void unmodifiableCollections () {
         var listOfIntegers = Arrays.asList(1, 2, 3);
 

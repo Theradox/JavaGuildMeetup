@@ -14,6 +14,9 @@ import java.util.stream.Collectors;
 
 public class Java11 {
 
+    /**
+     * Adds each String before \n as a separate item in a list
+     */
     public void newStringMethods () {
         String multilineString = "Baeldung helps \n \n developers \n explore Java.";
         List<String> lines = multilineString.lines()
@@ -24,11 +27,18 @@ public class Java11 {
         System.out.println(lines);
     }
 
+    /**
+     * New file write and read methods
+     */
     public void newFileMethods () throws IOException {
         Path filePath = Files.writeString(Files.createTempFile(Path.of("src/com/company"), "file", ".txt"), "Intertec.io");
         String fileContent = Files.readString(filePath);
+        System.out.println(fileContent);
     }
 
+    /**
+     * Showcase of 'var' local variable for lambda
+     */
     public void localVariableSyntaxForLambda () {
         var arrInteger = new Integer[]{5, 9, 3, 6, 2, 4, 8, 7, 1};
         long cnt = Arrays.stream(arrInteger).filter(
@@ -36,6 +46,9 @@ public class Java11 {
         System.out.println(cnt);
     }
 
+    /**
+     * HTTP client initializer
+     */
     public void HTTPclientImprovements () throws IOException, InterruptedException {
         HttpClient httpClient = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_2)
