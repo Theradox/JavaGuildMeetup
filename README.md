@@ -1,5 +1,5 @@
 # Java Guild Meetup
-Java Guild Meetup presentation on the topic:  ``Java over the years``
+Java Guild Meetup presentation on the topic:  **``Java over the years``**
 
 Presented by: Bojan Spasovski | Stamencho Bogdanovski 
 
