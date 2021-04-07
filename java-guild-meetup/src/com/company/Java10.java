@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class Java10 {
 
     /**
-     * How not to instantiate 'var' local variable
+     * Introduction to 'var' local variable and how not to instantiate it
      */
 //    var asdf = "asdf";
 //    public var ="hello";

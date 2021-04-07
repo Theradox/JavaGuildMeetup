@@ -88,7 +88,7 @@ public class Java12 {
             case SUNDAY:
                 typeOfDay = "Day Off";
         }
-        System.out.println(dayOfWeek);
+        System.out.println(typeOfDay);
     }
 
     /**
@@ -102,6 +102,7 @@ public class Java12 {
             case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> "Working Day";
             case SATURDAY, SUNDAY -> "Day Off";
         };
+        System.out.println(typeOfDay);
     }
 
     /**

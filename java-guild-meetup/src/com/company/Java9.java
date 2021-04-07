@@ -15,6 +15,9 @@ import java.util.stream.IntStream;
 
 public class Java9 {
 
+    /**
+     * New Collection Factory methods
+     */
     public void newApisCollectionFactoryMethods() {
         //Immutable Set
         Set<Integer> ints = Set.of(1, 2, 3);

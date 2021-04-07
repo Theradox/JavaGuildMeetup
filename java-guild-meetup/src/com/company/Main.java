@@ -15,7 +15,7 @@ public class Main {
 //        Java12 java12 = new Java12();
 //        java12.newStringClassMethods();
 //        java12.fileMismatch();
-//        java12.compactNumberFormating();
+//        java12.compactNumberFormatting();
 //        java12.oldSwitchCase();
 //        java12.newSwitchCase();
 //        java12.oldPatternMatching();
