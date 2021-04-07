@@ -1,6 +1,6 @@
 # JavaGuildMeetup
 Java Guild Meetup presentation about ``Java over the years``
 
-Stamencho Bogdanovski | Bojan Spasovski
+Presented by: Bojan Spasovski | Stamencho Bogdanovski 
 
-04.08.2021 - Intertec.io, Skopje 
+04.08.2021 - Intertec.io, Skopje
