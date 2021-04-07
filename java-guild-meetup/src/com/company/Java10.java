@@ -51,5 +51,26 @@ public class Java10 {
         evenList.add(4);
     }
 
+    /**
+     * Optional orElseThrow() method
+     */
+    public void optionalOrElseThrowMethod() {
+        var numList1 = List.of(1,2,3,4);
+        var numList2 = List.of(1,3,5,7);
+
+        var firstEven = numList1.stream()
+                .filter(i -> i % 2 == 0)
+                .findFirst()
+                .orElseThrow();
+        System.out.printf("First even number is: %s%n", firstEven);
+
+        // throwing NoSuchElementException
+
+        var errorCheck = numList2.stream()
+                .filter(i -> i % 2 == 0)
+                .findFirst()
+                .orElseThrow();
+    }
+
 
 }

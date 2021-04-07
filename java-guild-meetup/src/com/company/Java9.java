@@ -16,9 +16,35 @@ import java.util.stream.IntStream;
 public class Java9 {
 
     /**
-     * New Collection Factory methods
+     * Implemented http client
+     */
+    public void http2() throws URISyntaxException, IOException, InterruptedException {
+        HttpClient client = HttpClient.newHttpClient();
+
+        HttpRequest req =
+                HttpRequest.newBuilder(URI.create("http://www.google.com"))
+                        .header("User-Agent", "Java")
+                        .GET()
+                        .build();
+
+
+        HttpResponse<String> httpResponse = client.send(req, HttpResponse.BodyHandlers.ofString());
+
+    }
+
+    /**
+     * New APIs and new Collection Factory methods
      */
     public void newApisCollectionFactoryMethods() {
+        //Old way
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(1);
+        list1.add(2);
+
+        // New way
+        List<Integer> list2 = List.of(1,2);
+
+
         //Immutable Set
         Set<Integer> ints = Set.of(1, 2, 3);
         List<String> strings = List.of("first", "second");
@@ -37,23 +63,6 @@ public class Java9 {
      */
     public void streamApiImprovements() {
         IntStream.iterate(1, i -> i < 100, i -> i + 1).forEach(System.out::println);
-
-    }
-
-    /**
-     * Implemented http client
-     */
-    public void http2() throws URISyntaxException, IOException, InterruptedException {
-        HttpClient client = HttpClient.newHttpClient();
-
-        HttpRequest req =
-                HttpRequest.newBuilder(URI.create("http://www.google.com"))
-                        .header("User-Agent", "Java")
-                        .GET()
-                        .build();
-
-
-        HttpResponse<String> httpResponse = client.send(req, HttpResponse.BodyHandlers.ofString());
 
     }
 
