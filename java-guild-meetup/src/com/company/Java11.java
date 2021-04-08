@@ -16,6 +16,7 @@ public class Java11 {
 
     /**
      * Adds each String before \n as a separate item in a list
+     * methods - lines(), isBlank(), strip
      */
     public void newStringMethods () {
         String multilineString = "Intertec helps \n \n developers \n explore Java.";
@@ -29,7 +30,7 @@ public class Java11 {
     }
 
     /**
-     * New file write and read methods
+     * New file write and read methods - writeString() and readString()
      */
     public void newFileMethods () throws IOException {
         Path filePath = Files.writeString(Files.createTempFile("file", ".txt"), "Intertec.io");
@@ -42,19 +43,21 @@ public class Java11 {
      */
     public void localVariableSyntaxForLambda () {
         var arrInteger = new Integer[]{5, 9, 3, 6, 2, 4, 8, 7, 1};
-        long cnt = Arrays.stream(arrInteger).filter(
-                (var a) -> (a != null && a > 5)).count();
+        long cnt = Arrays.
+                stream(arrInteger)
+                .filter((var a) -> (a != null && a > 5)).count();
         System.out.println(cnt);
     }
 
     /**
-     * HTTP client initializer
+     * New HTTP client initializer
      */
     public void HTTPClientImprovements () throws IOException, InterruptedException {
         HttpClient httpClient = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_2)
                 .connectTimeout(Duration.ofSeconds(20))
                 .build();
+
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .GET()
                 .uri(URI.create("https://www.google.com"))

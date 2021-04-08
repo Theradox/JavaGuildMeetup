@@ -93,17 +93,19 @@ public class Java12 {
     }
 
     /**
-     * New representation of switch case
+     * New representation of switch case - Preview feature
      */
     public void newSwitchCase() {
 
         DayOfWeek dayOfWeek = LocalDate.now().getDayOfWeek();
         String typeOfDay = "";
-        typeOfDay = switch (dayOfWeek) {
-            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> "Working Day";
-            case SATURDAY, SUNDAY -> "Day Off";
-        };
-        System.out.println(typeOfDay);
+        switch (dayOfWeek) {
+            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> {
+                System.out.println("What type of day it is?");
+                System.out.println("Working day");
+            }
+            case SATURDAY, SUNDAY -> System.out.println("Day Off");
+        }
     }
 
     /**

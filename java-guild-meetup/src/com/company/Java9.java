@@ -16,9 +16,9 @@ import java.util.stream.IntStream;
 public class Java9 {
 
     /**
-     * Implemented http client
+     * Implemented http client - It is deployed that redirected to Incubator module
      */
-    public void http2() throws URISyntaxException, IOException, InterruptedException {
+    public void httpClient() throws URISyntaxException, IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest req =
@@ -29,7 +29,6 @@ public class Java9 {
 
 
         HttpResponse<String> httpResponse = client.send(req, HttpResponse.BodyHandlers.ofString());
-
     }
 
     /**
