@@ -18,7 +18,7 @@ public class Java11 {
      * Adds each String before \n as a separate item in a list
      */
     public void newStringMethods () {
-        String multilineString = "Baeldung helps \n \n developers \n explore Java.";
+        String multilineString = "Intertec helps \n \n developers \n explore Java.";
         List<String> lines = multilineString.lines()
                 .filter(line -> !line.isBlank())
                 .map(String::strip)
@@ -31,7 +31,7 @@ public class Java11 {
      * New file write and read methods
      */
     public void newFileMethods () throws IOException {
-        Path filePath = Files.writeString(Files.createTempFile(Path.of("src/com/company"), "file", ".txt"), "Intertec.io");
+        Path filePath = Files.writeString(Files.createTempFile("file", ".txt"), "Intertec.io");
         String fileContent = Files.readString(filePath);
         System.out.println(fileContent);
     }

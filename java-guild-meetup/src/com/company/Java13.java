@@ -21,6 +21,17 @@ public class Java13 {
     }
 
     /**
+     * Another example of multiline text block
+     */
+    public void textBlock() {
+        String multiline = """
+    A quick brown fox jumps over a lazy dog; 
+    
+    the lazy dog howls loudly.""";
+        System.out.println(multiline);
+    }
+
+    /**
      * Old way of json String formatting
      */
     public void jsonString() {
@@ -41,16 +52,4 @@ public class Java13 {
                 """;
         System.out.println(TEXT_BLOCK_JSON);
     }
-
-    /**
-     * Another example of multiline text block
-     */
-    public void textBlock() {
-        String multiline = """
-    A quick brown fox jumps over a lazy dog; 
-    
-    the lazy dog howls loudly.""";
-        System.out.println(multiline);
-    }
-
 }

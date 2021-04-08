@@ -14,7 +14,7 @@ public class Java12 {
      * String methods for indentation and transformation of a String
      */
     public void newStringClassMethods() {
-        String text = "Hello Baeldung!\nThis is Java 12 article.";
+        String text = "Hello Intertec!\nThis is Java 12 article.";
 
         text = text.indent(4);
         System.out.println(text);
@@ -48,7 +48,7 @@ public class Java12 {
     public void compactNumberFormatting() {
 
         NumberFormat likesShort = NumberFormat
-                .getCompactNumberInstance(new Locale("de", "DE"), NumberFormat.Style.SHORT);
+                .getCompactNumberInstance(new Locale("mk", "MK"), NumberFormat.Style.SHORT);
         likesShort.setMaximumFractionDigits(2);
         System.out.println(likesShort.format(1234));
 
@@ -58,7 +58,7 @@ public class Java12 {
         System.out.println(likesShort2.format(1234));
 
         NumberFormat likesLong = NumberFormat
-                .getCompactNumberInstance(new Locale("de", "DE"), NumberFormat.Style.LONG);
+                .getCompactNumberInstance(new Locale("mk", "MK"), NumberFormat.Style.LONG);
         likesLong.setMaximumFractionDigits(2);
         System.out.println(likesLong.format(1234));
 

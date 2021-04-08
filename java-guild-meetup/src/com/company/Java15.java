@@ -25,7 +25,7 @@ final class Car extends Vehicle {
 non-sealed class Boat extends Vehicle {
 
 }
-//final class Plane extends Vehicle {
-//    
+//class Plane extends Vehicle {
+//
 //}
 
