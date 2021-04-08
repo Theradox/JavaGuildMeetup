@@ -24,6 +24,7 @@ public class Java11 {
                 .map(String::strip)
                 .collect(Collectors.toList());
 
+        System.out.println(multilineString);
         System.out.println(lines);
     }
 
@@ -49,7 +50,7 @@ public class Java11 {
     /**
      * HTTP client initializer
      */
-    public void HTTPclientImprovements () throws IOException, InterruptedException {
+    public void HTTPClientImprovements () throws IOException, InterruptedException {
         HttpClient httpClient = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_2)
                 .connectTimeout(Duration.ofSeconds(20))

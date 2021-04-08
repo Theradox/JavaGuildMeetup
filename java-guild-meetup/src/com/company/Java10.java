@@ -65,7 +65,7 @@ public class Java10 {
         System.out.printf("First even number is: %s%n", firstEven);
 
         // throwing NoSuchElementException
-
+        System.out.println("Throwing NoSuchElementException:");
         var errorCheck = numList2.stream()
                 .filter(i -> i % 2 == 0)
                 .findFirst()

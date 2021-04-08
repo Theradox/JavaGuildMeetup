@@ -22,11 +22,12 @@ public class Java12 {
         text = text.indent(-10);
         System.out.println(text);
 
-        String text2 = "Baeldung";
-        String transformed = text2
+        String text2 = "Intertec";
+        String transformedText = text2
                 .transform(value -> new StringBuilder(value).reverse().toString());
 
-        System.out.println(transformed);
+        System.out.printf("Untransformed string: %s%n", text2);
+        System.out.printf("Transformed string: %s%n", transformedText);
     }
 
     /**
@@ -111,7 +112,7 @@ public class Java12 {
     public void oldPatternMatching () {
         Object obj = "Hello World!";
         if (obj instanceof String) {
-            String s = (String) obj;
+            String s = (String) obj; // No need for this line
             int length = s.length();
             System.out.println(length);
         }

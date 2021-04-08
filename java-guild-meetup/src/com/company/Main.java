@@ -7,11 +7,16 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         // write your code here
+
+
+//        Java10 java10 = new Java10();
+//        java10.optionalOrElseThrowMethod();
+
 //        Java11 java11 = new Java11();
 //        java11.newStringMethods();
 //        java11.newFileMethods();
 //        java11.localVariableSyntaxForLambda();
-//        java11.HTTPclientImprovements();
+//        java11.HTTPClientImprovements();
 //
 //        Java12 java12 = new Java12();
 //        java12.newStringClassMethods();
