@@ -1,6 +1,9 @@
 package com.company;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Java10 {
@@ -10,7 +13,6 @@ public class Java10 {
      */
 //    var asdf = "asdf";
 //    public var ="hello";
-
     public void localVariable() {
         //cannot instantiate
 //        var n;
@@ -38,7 +40,7 @@ public class Java10 {
     /**
      * New unmodifiable collections
      */
-    public void unmodifiableCollections () {
+    public void unmodifiableCollections() {
         var listOfIntegers = Arrays.asList(1, 2, 3);
 
         var copyList = List.copyOf(listOfIntegers);
@@ -55,8 +57,8 @@ public class Java10 {
      * Optional orElseThrow() method
      */
     public void optionalOrElseThrowMethod() {
-        var numList1 = List.of(1,2,3,4);
-        var numList2 = List.of(1,3,5,7);
+        var numList1 = List.of(1, 2, 3, 4);
+        var numList2 = List.of(1, 3, 5, 7);
 
         var firstEven = numList1.stream()
                 .filter(i -> i % 2 == 0)

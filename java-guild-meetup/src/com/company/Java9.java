@@ -41,7 +41,7 @@ public class Java9 {
         list1.add(2);
 
         // New way
-        List<Integer> list2 = List.of(1,2);
+        List<Integer> list2 = List.of(1, 2);
 
 
         //Immutable Set

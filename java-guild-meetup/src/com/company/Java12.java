@@ -111,7 +111,7 @@ public class Java12 {
     /**
      * Old representation of pattern matching
      */
-    public void oldPatternMatching () {
+    public void oldPatternMatching() {
         Object obj = "Hello World!";
         if (obj instanceof String) {
             String s = (String) obj; // No need for this line

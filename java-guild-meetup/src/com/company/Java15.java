@@ -5,7 +5,7 @@ public record Java15(String name, int age) {
      * Override constructor
      */
     public Java15 {
-        if(age < 0) {
+        if (age < 0) {
             throw new IllegalArgumentException("Age cannot be negative");
         }
     }
@@ -14,14 +14,16 @@ public record Java15(String name, int age) {
 }
 
 /**
- * Sealed classes 
+ * Sealed classes
  */
 sealed class Vehicle permits Car, Boat {
 
 }
+
 final class Car extends Vehicle {
 
 }
+
 non-sealed class Boat extends Vehicle {
 
 }

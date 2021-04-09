@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         // write your code here
 
-
 //        Java10 java10 = new Java10();
 //        java10.optionalOrElseThrowMethod();
 
